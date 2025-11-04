@@ -45,7 +45,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             }
             ?>
           </div>
-          <div class="text-2xl font-bold tracking-wide text-[#285430] font-['AudioWide']">NADI BUMI</div>
+          <div class="text-2xl font-bold tracking-wide text-white font-['AudioWide']">NADI BUMI</div>
         </div>
       </div>
     </nav>

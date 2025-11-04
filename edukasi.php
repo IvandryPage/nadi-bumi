@@ -16,7 +16,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
     <!-- Types Section -->
-    <section class="grid md:grid-cols-2 gap-8 mb-20">
+    <section class="grid md:grid-cols-2 gap-8 mb-20" id="tipegempa">
       <!-- Tektonik -->
       <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:-translate-y-2 transition-all duration-300 border-4 border-secondary">
         <div class="bg-gradient-to-br from-secondary to-primary h-64 flex items-center justify-center">
@@ -77,7 +77,7 @@
     </section>
 
     <!-- Mitigation Section -->
-    <section class="mb-20">
+    <section class="mb-20" id="mitigasi">
       <h2 class="text-5xl font-bold text-center text-primary mb-4">Mitigasi Bencana</h2>
       <p class="text-center text-gray-600 text-lg mb-12">Langkah-langkah pencegahan dan pengurangan risiko</p>
       <div class="grid md:grid-cols-3 gap-8">
@@ -170,9 +170,9 @@
           <p class="text-xl opacity-90 leading-relaxed mb-8">
             Temukan titik-titik lokasi penampungan darurat terdekat di area Anda untuk keamanan maksimal saat terjadi bencana gempa bumi.
           </p>
-          <button class="bg-accent text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-light hover:scale-105 transition-all duration-300 shadow-xl">
+          <a href="peta.php" class="mt-6 inline-block px-6 py-3 text-white font-semibold rounded-lg  bg-gradient-to-b from-[#59BA6A] to-[#285430] hover:opacity-90 transition">
             Lihat Peta Lokasi
-          </button>
+          </a>
         </div>
       </div>
     </section>
