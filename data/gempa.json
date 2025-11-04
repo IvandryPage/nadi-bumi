@@ -1,0 +1,186 @@
+{
+  "Infogempa": {
+    "gempa": [
+      {
+        "Tanggal": "03 Nov 2025",
+        "Jam": "11:21:24 WIB",
+        "DateTime": "2025-11-03T04:21:24+00:00",
+        "Coordinates": "5.11,125.37",
+        "Lintang": "5.11 LU",
+        "Bujur": "125.37 BT",
+        "Magnitude": "5.3",
+        "Kedalaman": "10 km",
+        "Wilayah": "167 km BaratLaut TAHUNA-KEP.SANGIHE-SULUT",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "02 Nov 2025",
+        "Jam": "10:09:21 WIB",
+        "DateTime": "2025-11-02T03:09:21+00:00",
+        "Coordinates": "-7.79,127.81",
+        "Lintang": "7.79 LS",
+        "Bujur": "127.81 BT",
+        "Magnitude": "5.5",
+        "Kedalaman": "139 km",
+        "Wilayah": "40 km TimurLaut MALUKUBRTDAYA",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "01 Nov 2025",
+        "Jam": "11:32:33 WIB",
+        "DateTime": "2025-11-01T04:32:33+00:00",
+        "Coordinates": "-1.64,139.44",
+        "Lintang": "1.64 LS",
+        "Bujur": "139.44 BT",
+        "Magnitude": "5.3",
+        "Kedalaman": "10 km",
+        "Wilayah": "80 km TimurLaut SARMI-PAPUA",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "01 Nov 2025",
+        "Jam": "06:20:57 WIB",
+        "DateTime": "2025-10-31T23:20:57+00:00",
+        "Coordinates": "-4.44,134.07",
+        "Lintang": "4.44 LS",
+        "Bujur": "134.07 BT",
+        "Magnitude": "5.0",
+        "Kedalaman": "10 km",
+        "Wilayah": "128 km Tenggara KAIMANA-PAPUABRT",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "01 Nov 2025",
+        "Jam": "00:02:21 WIB",
+        "DateTime": "2025-10-31T17:02:21+00:00",
+        "Coordinates": "-6.11,133.20",
+        "Lintang": "6.11 LS",
+        "Bujur": "133.20 BT",
+        "Magnitude": "5.1",
+        "Kedalaman": "55 km",
+        "Wilayah": "71 km Tenggara MALUKUTENGGARA",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "30 Okt 2025",
+        "Jam": "15:04:02 WIB",
+        "DateTime": "2025-10-30T08:04:02+00:00",
+        "Coordinates": "-2.68,139.44",
+        "Lintang": "2.68 LS",
+        "Bujur": "139.44 BT",
+        "Magnitude": "5.3",
+        "Kedalaman": "52 km",
+        "Wilayah": "107 km BaratDaya KAB-JAYAPURA-PAPUA",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "28 Okt 2025",
+        "Jam": "21:40:18 WIB",
+        "DateTime": "2025-10-28T14:40:18+00:00",
+        "Coordinates": "-6.81,130.13",
+        "Lintang": "6.81 LS",
+        "Bujur": "130.13 BT",
+        "Magnitude": "6.8",
+        "Kedalaman": "185 km",
+        "Wilayah": "183 km BaratLaut TANIMBAR",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "28 Okt 2025",
+        "Jam": "08:31:20 WIB",
+        "DateTime": "2025-10-28T01:31:20+00:00",
+        "Coordinates": "1.43,121.77",
+        "Lintang": "1.43 LU",
+        "Bujur": "121.77 BT",
+        "Magnitude": "5.5",
+        "Kedalaman": "10 km",
+        "Wilayah": "68 km TimurLaut BUOL-SULTENG",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "28 Okt 2025",
+        "Jam": "06:35:15 WIB",
+        "DateTime": "2025-10-27T23:35:15+00:00",
+        "Coordinates": "4.89,96.06",
+        "Lintang": "4.89 LU",
+        "Bujur": "96.06 BT",
+        "Magnitude": "5.3",
+        "Kedalaman": "10 km",
+        "Wilayah": "26 km BaratDaya KAB-PIDIEJAYA-ACEH",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "27 Okt 2025",
+        "Jam": "00:04:28 WIB",
+        "DateTime": "2025-10-26T17:04:28+00:00",
+        "Coordinates": "-9.06,123.97",
+        "Lintang": "9.06 LS",
+        "Bujur": "123.97 BT",
+        "Magnitude": "6.3",
+        "Kedalaman": "75 km",
+        "Wilayah": "82 km BaratLaut TIMORTENGAHUT-NTT",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "25 Okt 2025",
+        "Jam": "11:56:28 WIB",
+        "DateTime": "2025-10-25T04:56:28+00:00",
+        "Coordinates": "4.42,96.50",
+        "Lintang": "4.42 LU",
+        "Bujur": "96.50 BT",
+        "Magnitude": "5.0",
+        "Kedalaman": "10 km",
+        "Wilayah": "29 km TimurLaut KAB-NAGANRAYA-ACEH",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "24 Okt 2025",
+        "Jam": "11:46:36 WIB",
+        "DateTime": "2025-10-24T04:46:36+00:00",
+        "Coordinates": "-9.03,123.73",
+        "Lintang": "9.03 LS",
+        "Bujur": "123.73 BT",
+        "Magnitude": "5.3",
+        "Kedalaman": "108 km",
+        "Wilayah": "67 km Tenggara LEMBATA-NTT",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "23 Okt 2025",
+        "Jam": "18:46:12 WIB",
+        "DateTime": "2025-10-23T11:46:12+00:00",
+        "Coordinates": "-6.17,131.08",
+        "Lintang": "6.17 LS",
+        "Bujur": "131.08 BT",
+        "Magnitude": "6.1",
+        "Kedalaman": "117 km",
+        "Wilayah": "192 km BaratDaya MALUKUTENGGARA",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "20 Okt 2025",
+        "Jam": "05:44:53 WIB",
+        "DateTime": "2025-10-19T22:44:53+00:00",
+        "Coordinates": "-7.40,130.80",
+        "Lintang": "7.40 LS",
+        "Bujur": "130.80 BT",
+        "Magnitude": "5.2",
+        "Kedalaman": "121 km",
+        "Wilayah": "84 km BaratLaut TANIMBAR",
+        "Potensi": "Tidak berpotensi tsunami"
+      },
+      {
+        "Tanggal": "19 Okt 2025",
+        "Jam": "09:52:35 WIB",
+        "DateTime": "2025-10-19T02:52:35+00:00",
+        "Coordinates": "-1.73,139.04",
+        "Lintang": "1.73 LS",
+        "Bujur": "139.04 BT",
+        "Magnitude": "5.1",
+        "Kedalaman": "40 km",
+        "Wilayah": "35 km TimurLaut SARMI-PAPUA",
+        "Potensi": "Tidak berpotensi tsunami"
+      }
+    ]
+  }
+}
