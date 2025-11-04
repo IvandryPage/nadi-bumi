@@ -3,7 +3,7 @@
 <div class="pt-20 min-h-screen">
 
   <!-- Hero Banner -->
-  <section class="bg-gradient-to-r from-primary via-secondary to-accent py-20">
+  <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <svg class="w-32 h-32 text-light mx-auto mb-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -16,7 +16,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
     <!-- Types Section -->
-    <div class="grid md:grid-cols-2 gap-8 mb-20">
+    <section class="grid md:grid-cols-2 gap-8 mb-20">
       <!-- Tektonik -->
       <div class="bg-white rounded-3xl overflow-hidden shadow-2xl hover:-translate-y-2 transition-all duration-300 border-4 border-secondary">
         <div class="bg-gradient-to-br from-secondary to-primary h-64 flex items-center justify-center">
@@ -74,15 +74,15 @@
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Mitigation Section -->
-    <div class="mb-20">
+    <section class="mb-20">
       <h2 class="text-5xl font-bold text-center text-primary mb-4">Mitigasi Bencana</h2>
       <p class="text-center text-gray-600 text-lg mb-12">Langkah-langkah pencegahan dan pengurangan risiko</p>
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Sebelum -->
-        <div class="bg-gradient-to-br from-primary to-secondary rounded-3xl p-8 text-center shadow-2xl hover:-translate-y-2 transition-all duration-300 border-4 border-accent group">
+        <div class="rounded-3xl p-8 text-center shadow-2xl hover:-translate-y-2 transition-all duration-300 border-4 border-accent group">
           <div class="bg-white bg-opacity-20 rounded-full w-32 h-32 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <svg class="w-20 h-20 text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -93,7 +93,7 @@
         </div>
 
         <!-- Saat -->
-        <div class="bg-gradient-to-br from-accent to-secondary rounded-3xl p-8 text-center shadow-2xl hover:-translate-y-2 transition-all duration-300 border-4 border-primary group">
+        <div class="rounded-3xl p-8 text-center shadow-2xl hover:-translate-y-2 transition-all duration-300 border-4 border-primary group">
           <div class="bg-white bg-opacity-20 rounded-full w-32 h-32 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <svg class="w-20 h-20 text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -104,7 +104,7 @@
         </div>
 
         <!-- Sesudah -->
-        <div class="bg-gradient-to-br from-secondary to-accent rounded-3xl p-8 text-center shadow-2xl hover:-translate-y-2 transition-all duration-300 border-4 border-primary group">
+        <div class="rounded-3xl p-8 text-center shadow-2xl hover:-translate-y-2 transition-all duration-300 border-4 border-primary group">
           <div class="bg-white bg-opacity-20 rounded-full w-32 h-32 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <svg class="w-20 h-20 text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -114,10 +114,10 @@
           <p class="text-light opacity-90 leading-relaxed">Pemulihan dan evaluasi pasca gempa</p>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Response Guide Section -->
-    <div class="mb-20">
+    <section class="mb-20">
       <h2 class="text-5xl font-bold text-primary mb-12">Panduan Penanggulangan</h2>
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
@@ -134,14 +134,14 @@
           foreach ($steps as $step):
           ?>
             <div class="flex gap-4 items-start bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-accent">
-              <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+              <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                 <span class="text-light font-bold text-2xl"><?= $step['num'] ?></span>
               </div>
               <p class="text-gray-700 leading-relaxed pt-3 text-lg"><?= $step['text'] ?></p>
             </div>
           <?php endforeach; ?>
         </div>
-        <div class="bg-gradient-to-br from-accent to-secondary h-full min-h-[600px] rounded-3xl shadow-2xl flex items-center justify-center border-4 border-primary">
+        <div class="h-full min-h-[600px] rounded-3xl shadow-2xl flex items-center justify-center border-4 border-primary">
           <svg class="w-48 h-48 text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
@@ -154,10 +154,10 @@
           <button class="<?= $i === 0 ? 'w-8 bg-primary' : 'w-3 bg-gray-300' ?> h-3 rounded-full transition-all duration-300 hover:bg-secondary"></button>
         <?php endfor; ?>
       </div>
-    </div>
+    </section>
 
     <!-- Shelter Location Section -->
-    <div class="bg-gradient-to-br from-primary to-secondary rounded-3xl overflow-hidden shadow-2xl">
+    <section class="rounded-3xl overflow-hidden shadow-2xl">
       <div class="grid lg:grid-cols-2 gap-8 items-center p-12">
         <div class="bg-accent bg-opacity-20 backdrop-blur-sm h-96 rounded-2xl flex items-center justify-center border-4 border-light border-opacity-30">
           <svg class="w-40 h-40 text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,10 +175,10 @@
           </button>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Emergency Kit Section -->
-    <div class="mt-20 bg-white rounded-3xl p-12 shadow-2xl border-4 border-accent">
+    <section class="mt-20 bg-white rounded-3xl p-12 shadow-2xl border-4 border-accent">
       <h2 class="text-5xl font-bold text-primary mb-8 text-center">Tas Siaga Bencana</h2>
       <p class="text-center text-gray-600 text-lg mb-12">Barang-barang penting yang harus disiapkan</p>
       <div class="grid md:grid-cols-4 gap-6">
@@ -203,7 +203,7 @@
           </div>
         <?php endforeach; ?>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 

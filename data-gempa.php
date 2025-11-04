@@ -3,10 +3,11 @@ require_once "data/gempa.php";
 include "includes/_header.php";
 
 // // Pastikan bentuknya array indeks numerik (bukan hanya 1 item)
-// if (isset($gempaList['Tanggal'])) {
-//   $gempaList = [$gempaList]; // ubah ke array berisi 1 elemen
+// if (isset($gempa['Tanggal'])) {
+//   $gempa = [$gempa]; // ubah ke array berisi 1 elemen
 // }
 
+date_default_timezone_set('Asia/Jakarta');
 $perPage = 5;
 $totalItems = count($gempa);
 $totalPages = max(1, ceil($totalItems / $perPage));
@@ -18,32 +19,53 @@ $offset = ($page - 1) * $perPage;
 $currentPageData = array_slice($gempa, $offset, $perPage);
 
 // Inisialisasi statistik
-$today = date('d M Y');
-$weekAgo = strtotime('-6 days'); // 7 hari termasuk hari ini
+date_default_timezone_set('Asia/Jakarta');
+
+$now = time();
+$weekAgo = strtotime('-7 days');
+
 $gempaHariIni = 0;
 $gempaMingguIni = 0;
 $totalMagnitude = 0;
-$totalWilayah = [];
+$totalCount = 0;
+$wilayahList = [];
 
 foreach ($gempa as $item) {
-  $tanggalGempa = strtotime($item['Tanggal']);
-  $totalMagnitude += floatval($item['Magnitude']);
+  // ambil waktu gempa
+  if (!empty($item['DateTime'])) {
+    $timestamp = strtotime($item['DateTime']);
+  } else {
+    $tanggal = $item['Tanggal'] ?? '';
+    $jam = str_replace('WIB', '', ($item['Jam'] ?? ''));
+    $timestamp = strtotime("$tanggal $jam");
+  }
 
-  if ($item['Tanggal'] === $today) {
+  if (!$timestamp) continue; // skip kalau gagal dibaca
+
+  // cek hari ini
+  if (date('Y-m-d', $timestamp) === date('Y-m-d', $now)) {
     $gempaHariIni++;
   }
 
-  if ($tanggalGempa >= $weekAgo) {
+  // cek 7 hari terakhir
+  if ($timestamp >= $weekAgo && $timestamp <= $now) {
     $gempaMingguIni++;
   }
 
-  // Simpan nama wilayah
-  $totalWilayah[] = $item['Wilayah'];
+  // hitung magnitudo rata-rata
+  if (!empty($item['Magnitude'])) {
+    $totalMagnitude += floatval(str_replace(',', '.', $item['Magnitude']));
+    $totalCount++;
+  }
+
+  // kumpulkan wilayah
+  if (!empty($item['Wilayah'])) {
+    $wilayahList[] = $item['Wilayah'];
+  }
 }
 
-$totalGempa = count($gempa);
-$rataMagnitude = $totalGempa ? round($totalMagnitude / $totalGempa, 2) : 0;
-$provinsiTerdampak = count(array_unique($totalWilayah));
+$rataMagnitude = $totalCount ? round($totalMagnitude / $totalCount, 2) : 0;
+$provinsiTerdampak = count(array_unique($wilayahList));
 ?>
 
 <div class="pt-20 min-h-screen">
@@ -56,9 +78,10 @@ $provinsiTerdampak = count(array_unique($totalWilayah));
         <p class="text-gray-700 text-lg mb-8 leading-relaxed">
           Visualisasi real-time lokasi pusat gempa bumi yang terjadi di seluruh Indonesia dengan detail koordinat, kedalaman, dan magnitudo lengkap.
         </p>
-        <button class="bg-[#5F8D4E] text-[#E5D9B6] px-10 py-4 rounded-xl font-semibold hover:bg-[#285430] hover:scale-105 transition-all duration-300 shadow-xl">
+        <a href="data-gempa.php"
+          class="mt-6 inline-block px-6 py-3 text-white font-semibold rounded-lg  bg-gradient-to-b from-[#59BA6A] to-[#285430] hover:opacity-90 transition">
           Lihat Peta Interaktif
-        </button>
+        </a>
       </div>
       <div class="lg:col-span-3 bg-gradient-to-br from-[#A4BE7B] to-[#5F8D4E] h-96 rounded-3xl shadow-2xl flex items-center justify-center border-4 border-[#285430] border-opacity-10 overflow-hidden group">
         <svg class="w-40 h-40 text-[#E5D9B6] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -159,7 +182,7 @@ $provinsiTerdampak = count(array_unique($totalWilayah));
     <!-- Quick Stats -->
     <div class="grid md:grid-cols-4 gap-6 mt-12">
       <div class="bg-gradient-to-br from-[#285430] to-[#5F8D4E] text-[#E5D9B6] rounded-2xl p-6 shadow-xl text-center">
-        <div class="text-4xl font-bold mb-2"><?= $totalGempa ?></div>
+        <div class="text-4xl font-bold mb-2"><?= $gempaMingguIni ?></div>
         <p class="text-sm opacity-90">Total Gempa Minggu Ini</p>
       </div>
       <div class="bg-gradient-to-br from-[#5F8D4E] to-[#A4BE7B] text-[#E5D9B6] rounded-2xl p-6 shadow-xl text-center">
