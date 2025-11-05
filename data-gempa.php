@@ -78,7 +78,7 @@ $provinsiTerdampak = count(array_unique($wilayahList));
         <p class="text-gray-700 text-lg mb-8 leading-relaxed">
           Visualisasi real-time lokasi pusat gempa bumi yang terjadi di seluruh Indonesia dengan detail koordinat, kedalaman, dan magnitudo lengkap.
         </p>
-        <a href="data-gempa.php"
+        <a href="map.php"
           class="mt-6 inline-block px-6 py-3 text-white font-semibold rounded-lg  bg-gradient-to-b from-[#59BA6A] to-[#285430] hover:opacity-90 transition">
           Lihat Peta Interaktif
         </a>
@@ -94,7 +94,8 @@ $provinsiTerdampak = count(array_unique($wilayahList));
     <!-- Data Table Section -->
     <div class="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#A4BE7B]" id="DataGempa">
       <h2 class="text-5xl font-bold text-center text-[#285430] mb-4">DATA GEMPA BUMI</h2>
-      <p class="text-center text-gray-600 text-lg mb-12">Rekapitulasi Gempa Bumi di Indonesia</p>
+      <p class="text-center text-gray-600 text-lg">Rekapitulasi Gempa Bumi di Indonesia</p>
+      <p class="text-center text-gray-600 text-lg mb-12">BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</p>
 
       <!-- Search & Filter (non-functional placeholder) -->
       <div class="flex flex-col md:flex-row gap-4 mb-8">

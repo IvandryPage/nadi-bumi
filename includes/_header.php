@@ -24,7 +24,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="min-h-screen bg-gradient-to-b from-[#59BA6A]/25 to-white to-white overflow-x-hidden font-['Ubuntu']">
+<body class="min-h-screen bg-gradient-to-b from-[#59BA6A]/50 via-white to-white overflow-x-hidden font-['Ubuntu']">
   <header class="sticky top-10 left-0 w-full z-50 bg-[#000000]/10">
     <!-- Navigation -->
     <nav class="backdrop-blur-sm bg-[#000000]/10 text-[#285430] fixed w-full z-50 shadow-lg border-b border-white/40">
@@ -45,7 +45,10 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             }
             ?>
           </div>
-          <div class="text-2xl font-bold tracking-wide text-white font-['AudioWide']">NADI BUMI</div>
+          <div class="text-2xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-[#59BA6A] to-[#A4BE7B] font-['Audiowide']">
+            NADI BUMI
+          </div>
+
         </div>
       </div>
     </nav>
