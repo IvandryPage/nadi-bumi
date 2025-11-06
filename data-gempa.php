@@ -2,10 +2,6 @@
 require_once "data/gempa.php";
 include "includes/_header.php";
 
-// // Pastikan bentuknya array indeks numerik (bukan hanya 1 item)
-// if (isset($gempa['Tanggal'])) {
-//   $gempa = [$gempa]; // ubah ke array berisi 1 elemen
-// }
 
 date_default_timezone_set('Asia/Jakarta');
 $perPage = 5;
@@ -83,12 +79,25 @@ $provinsiTerdampak = count(array_unique($wilayahList));
           Lihat Peta Interaktif
         </a>
       </div>
-      <div class="lg:col-span-3 bg-gradient-to-br from-[#A4BE7B] to-[#5F8D4E] h-96 rounded-3xl shadow-2xl flex items-center justify-center border-4 border-[#285430] border-opacity-10 overflow-hidden group">
-        <svg class="w-40 h-40 text-[#E5D9B6] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      </div>
+      <a id="miniMap" href="map.php" class="lg:col-span-3 z-0 h-96 rounded-3xl shadow-2xl border-4 border-[#285430] border-opacity-10 overflow-hidden"></a>
+
+      <script>
+        const miniMap = L.map('miniMap', {
+          zoomControl: false,
+          dragging: false,
+          scrollWheelZoom: false,
+          doubleClickZoom: false,
+          boxZoom: false,
+          keyboard: false,
+          tap: false,
+          attributionControl: false
+        }).setView([-2.5, 118], 4); // fokus Indonesia
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 8,
+        }).addTo(miniMap);
+      </script>
+
     </div>
 
     <!-- Data Table Section -->
@@ -96,28 +105,6 @@ $provinsiTerdampak = count(array_unique($wilayahList));
       <h2 class="text-5xl font-bold text-center text-[#285430] mb-4">DATA GEMPA BUMI</h2>
       <p class="text-center text-gray-600 text-lg">Rekapitulasi Gempa Bumi di Indonesia</p>
       <p class="text-center text-gray-600 text-lg mb-12">BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</p>
-
-      <!-- Search & Filter (non-functional placeholder) -->
-      <div class="flex flex-col md:flex-row gap-4 mb-8">
-        <div class="md:w-1/4">
-          <button class="w-full border-3 border-[#5F8D4E] bg-white text-[#5F8D4E] px-6 py-4 rounded-xl font-semibold hover:bg-[#5F8D4E] hover:text-[#E5D9B6] transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-            </svg>
-            Filter Data
-          </button>
-        </div>
-        <div class="md:w-3/4 flex gap-2">
-          <input type="text" placeholder="Cari berdasarkan lokasi, tanggal, atau magnitudo..."
-            class="flex-1 border-3 border-[#5F8D4E] px-6 py-4 rounded-xl focus:outline-none focus:border-[#285430] transition-all duration-300 shadow-lg" />
-          <button class="bg-[#285430] text-[#E5D9B6] px-8 py-4 rounded-xl font-semibold hover:bg-[#5F8D4E] transition-all duration-300 shadow-lg flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            Cari
-          </button>
-        </div>
-      </div>
 
       <!-- Table -->
       <div class="overflow-x-auto mb-8">

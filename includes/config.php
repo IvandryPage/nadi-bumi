@@ -9,8 +9,8 @@ define("DB_NAMA", "nadi_bumi_db");
 define("DB_USER", "root");
 define("DB_PASS", "");
 
-// $koneksi = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAMA);
+$koneksi = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAMA);
 
-// if (!$koneksi) {
-//   die("Koneksi. Gagal : " . mysqli_connect_error());
-// }
+if (!$koneksi) {
+  die("Koneksi. Gagal : " . mysqli_connect_error());
+}
