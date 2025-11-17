@@ -69,7 +69,9 @@ include __DIR__ . "/includes/_header.php";
             Ketahui Segalanya<br />Mengenai Gempa Bumi
           </h1>
           <p class="text-lg text-light opacity-90 mb-8">
-            Platform informasi lengkap dan terpercaya tentang aktivitas seismik di Indonesia.
+          Sebuah platform yang menyediakan informasi lengkap, akurat, dan terpercaya mengenai 
+          berbagai aktivitas seismik yang terjadi di seluruh wilayah Indonesia. Melalui data yang terus diperbarui, 
+          platform ini membantu masyarakat, peneliti, serta pihak terkait untuk memantau kondisi kegempaan secara lebih mudah, cepat, dan menyeluruh.
           </p>
           <a href="data-gempa.php"
             class="px-6 py-3 inline-block bg-gradient-to-b from-[#59BA6A] to-[#285430] text-white font-semibold rounded-lg">
@@ -95,7 +97,7 @@ include __DIR__ . "/includes/_header.php";
         <div class="p-[3px] rounded-3xl bg-gradient-to-b to-[#59BA6A] from-[#285430]">
           <div class="bg-white p-10 rounded-3xl text-center">
             <div class="text-7xl font-bold text-secondary mb-4"><?= $gempaMingguIni ?></div>
-            <p class="text-gray-700">Gempa dalam 3 hari terakhir</p>
+            <p class="text-gray-700 font-bold">Gempa dalam 3 hari terakhir</p>
           </div>
         </div>
 
@@ -103,7 +105,7 @@ include __DIR__ . "/includes/_header.php";
         <div class="p-[3px] rounded-3xl bg-gradient-to-b to-[#59BA6A] from-[#285430]">
           <div class="bg-white p-10 rounded-3xl text-center">
             <div class="text-7xl font-bold text-secondary mb-4"><?= $rataMagnitude ?></div>
-            <p class="text-gray-700">Magnitudo rata-rata</p>
+            <p class="text-gray-700 font-bold">Magnitudo rata-rata</p>
           </div>
         </div>
 
@@ -111,7 +113,7 @@ include __DIR__ . "/includes/_header.php";
         <div class="p-[3px] rounded-3xl bg-gradient-to-b to-[#59BA6A] from-[#285430]">
           <div class="bg-white p-10 rounded-3xl text-center">
             <div class="text-7xl font-bold text-secondary mb-4"><?= $provinsiTerdampak ?></div>
-            <p class="text-gray-700">Provinsi terdampak</p>
+            <p class="text-gray-700 font-bold">Provinsi terdampak</p>
           </div>
         </div>
 
