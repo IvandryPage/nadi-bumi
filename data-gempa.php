@@ -186,7 +186,45 @@ $provinsiTerdampak = count(array_unique($wilayahList));
         <p class="text-sm opacity-90">Provinsi Terdampak</p>
       </div>
     </div>
+    <!-- Relawan Terbaru (menggunakan kolom: nama, kontak, domisili, kodePenampungan) -->
+    <?php
+    // ambil 6 relawan terbaru (urut berdasarkan id atau insert order — pakai id desc jika ada)
+    $relawanQuery = "
+  SELECT r.nama, r.kontak, r.domisili, r.kodePenampungan, p.namaPenampungan
+  FROM relawan r
+  LEFT JOIN penampungan p ON r.kodePenampungan = p.kodePenampungan
+  ORDER BY r.idRelawan DESC
+  LIMIT 6
+";
+    $relawanRes = mysqli_query($koneksi, $relawanQuery);
+    ?>
+    <?php if ($relawanRes && mysqli_num_rows($relawanRes) > 0): ?>
+      <div class="mt-20">
+        <h2 class="text-4xl font-bold text-[#285430] mb-6">Relawan Terbaru</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <?php while ($r = mysqli_fetch_assoc($relawanRes)): ?>
+            <div class="bg-white border-2 border-[#A4BE7B] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition">
+              <h3 class="text-2xl font-bold text-[#285430]"><?= htmlspecialchars($r['nama']) ?></h3>
+              <p class="text-sm text-gray-600 mt-2">Domisili: <?= htmlspecialchars($r['domisili']) ?></p>
+              <p class="text-sm text-gray-600">Kontak: <?= htmlspecialchars($r['kontak']) ?></p>
+
+              <?php if (!empty($r['kodePenampungan'])): ?>
+                <p class="mt-4 text-sm text-[#5F8D4E] font-semibold">
+                  Terdaftar di: <?= htmlspecialchars($r['namaPenampungan'] ?? $r['kodePenampungan']) ?>
+                </p>
+              <?php endif; ?>
+            </div>
+          <?php endwhile; ?>
+        </div>
+      </div>
+    <?php else: ?>
+      <div class="mt-20">
+        <h2 class="text-4xl font-bold text-[#285430] mb-6">Relawan Terbaru</h2>
+        <p class="text-gray-600">Belum ada relawan terdaftar.</p>
+      </div>
+    <?php endif; ?>
   </div>
+
 </div>
 
 <?php include "includes/_footer.php"; ?>
