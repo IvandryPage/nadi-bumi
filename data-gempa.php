@@ -110,7 +110,7 @@ $provinsiTerdampak = count(array_unique($wilayahList));
       <div class="overflow-x-auto mb-8">
         <table class="w-full">
           <thead>
-            <tr class="bg-gradient-to-r from-[#285430] to-[#5F8D4E] text-[#E5D9B6]">
+            <tr class="bg-gradient-to-r from-[#285430] to-[#5F8D4E] text-[#FFFFFF]">
               <th class="px-6 py-4 text-left font-bold">No</th>
               <th class="px-6 py-4 text-left font-bold">Tanggal & Waktu</th>
               <th class="px-6 py-4 text-left font-bold">Wilayah</th>
@@ -122,11 +122,11 @@ $provinsiTerdampak = count(array_unique($wilayahList));
           <tbody>
             <?php if (!empty($currentPageData)): ?>
               <?php foreach ($currentPageData as $index => $item): ?>
-                <tr class="border-b border-[#A4BE7B] hover:bg-[#E5D9B6] transition-all duration-200">
+                <tr class="border-b border-[#A4BE7B] hover:bg-[#DADADA] transition-all duration-200">
                   <td class="px-6 py-4 font-medium text-gray-800"><?= $offset + $index + 1 ?></td>
                   <td class="px-6 py-4 text-gray-700"><?= htmlspecialchars($item['Tanggal']) ?> — <?= htmlspecialchars($item['Jam']) ?></td>
                   <td class="px-6 py-4 font-medium text-gray-800"><?= htmlspecialchars($item['Wilayah']) ?></td>
-                  <td class="px-6 py-4 font-bold text-[#5F8D4E]"><?= htmlspecialchars($item['Magnitude']) ?> SR</td>
+                  <td class="px-6 py-4 text-2xl font-bold text-[#5F8D4E]"><?= htmlspecialchars($item['Magnitude']) ?> SR</td>
                   <td class="px-6 py-4 text-gray-700"><?= htmlspecialchars($item['Kedalaman']) ?></td>
                   <td class="px-6 py-4 text-gray-700"><?= htmlspecialchars($item['Potensi']) ?></td>
                 </tr>
@@ -169,21 +169,21 @@ $provinsiTerdampak = count(array_unique($wilayahList));
 
     <!-- Quick Stats -->
     <div class="grid md:grid-cols-4 gap-6 mt-12">
-      <div class="bg-gradient-to-br from-[#285430] to-[#5F8D4E] text-[#E5D9B6] rounded-2xl p-6 shadow-xl text-center">
+      <div class="bg-gradient-to-br from-[#285430] to-[#A4BE7B] text-white rounded-2xl p-6 shadow-xl text-center">
         <div class="text-4xl font-bold mb-2"><?= $gempaMingguIni ?></div>
-        <p class="text-sm opacity-90">Total Gempa Minggu Ini</p>
+        <p class="opacity-100">Total Gempa Minggu Ini</p>
       </div>
-      <div class="bg-gradient-to-br from-[#5F8D4E] to-[#A4BE7B] text-[#E5D9B6] rounded-2xl p-6 shadow-xl text-center">
+      <div class="bg-gradient-to-br from-[#A4BE7B] to-[#5F8D4E] text-white rounded-2xl p-6 shadow-xl text-center">
         <div class="text-4xl font-bold mb-2"><?= $gempaHariIni ?></div>
-        <p class="text-sm opacity-90">Gempa Hari Ini</p>
+        <p class="opacity-100">Gempa Hari Ini</p>
       </div>
-      <div class="bg-gradient-to-br from-[#A4BE7B] to-[#5F8D4E] text-[#285430] rounded-2xl p-6 shadow-xl text-center">
+      <div class="bg-gradient-to-br from-[#A4BE7B] to-[#5F8D4E] text-white rounded-2xl p-6 shadow-xl text-center">
         <div class="text-4xl font-bold mb-2"><?= $rataMagnitude ?></div>
-        <p class="text-sm opacity-90">Rata-rata Magnitudo</p>
+        <p class="opacity-100">Rata-rata Magnitudo</p>
       </div>
-      <div class="bg-gradient-to-br from-[#285430] to-[#A4BE7B] text-[#E5D9B6] rounded-2xl p-6 shadow-xl text-center">
+      <div class="bg-gradient-to-br from-[#285430] to-[#A4BE7B] text-white rounded-2xl p-6 shadow-xl text-center">
         <div class="text-4xl font-bold mb-2"><?= $provinsiTerdampak ?></div>
-        <p class="text-sm opacity-90">Provinsi Terdampak</p>
+        <p class="opacity-100">Provinsi Terdampak</p>
       </div>
     </div>
     <!-- Relawan Terbaru (menggunakan kolom: nama, kontak, domisili, kodePenampungan) -->
