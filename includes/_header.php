@@ -40,7 +40,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
               'beranda.php' => 'Beranda',
               'data-gempa.php' => 'Data Gempa',
               'berita.php' => 'Berita',
-              'edukasi.php' => 'Edukasi & Informasi'
+              'edukasi.php' => 'Edukasi & Informasi',
+              'map.php' => 'Peta Interaktif'
             ];
 
             foreach ($navItems as $file => $label) {

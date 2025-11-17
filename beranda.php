@@ -118,14 +118,22 @@ $provinsiTerdampak = count(array_unique($wilayahList));
   </section>
 
   <!-- News Section -->
+  <?php
+  $news_query = "SELECT * FROM berita ORDER BY tanggal DESC LIMIT 1";
+  $news_result = mysqli_query($koneksi, $news_query);
+  $beritaTerkini = mysqli_fetch_assoc($news_result);
+  ?>
+
   <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="h-96 rounded-3xl shadow-2xl flex items-center justify-center border-4 border-primary border-opacity-10">
-          <svg class="w-32 h-32 text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
+        <div class="h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-primary border-opacity-10">
+          <img
+            src="assets/images/<?= htmlspecialchars($beritaTerkini['gambar']) ?>"
+            alt="<?= htmlspecialchars($beritaTerkini['judul']) ?>"
+            class="w-full h-full object-cover">
         </div>
+
         <div>
           <h2 class="text-5xl font-bold text-primary mb-6">
             Berita Terkini Gempa<br />Bumi yang Terjadi
@@ -133,6 +141,14 @@ $provinsiTerdampak = count(array_unique($wilayahList));
           <p class="text-gray-600 text-lg mb-8 leading-relaxed">
             Ikuti perkembangan terbaru tentang aktivitas gempa bumi di seluruh Indonesia dengan informasi yang akurat, cepat, dan terpercaya dari berbagai sumber resmi.
           </p>
+          <h3 class="text-2xl font-bold text-primary mb-4 leading-tight">
+            <?= htmlspecialchars($beritaTerkini['judul']) ?>
+          </h3>
+
+          <p class="text-gray-600 mb-4">
+            <?= date('d M Y', strtotime($beritaTerkini['tanggal'])) ?>
+          </p>
+
           <a href="berita.php" class="mt-6 inline-block px-6 py-3 text-white font-semibold rounded-lg  bg-gradient-to-b from-[#59BA6A] to-[#285430] hover:opacity-90 transition">
             Lihat Selengkapnya
           </a>

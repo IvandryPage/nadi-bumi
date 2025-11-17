@@ -4,7 +4,7 @@ include __DIR__ . "/includes/_header.php";
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 // Ambil berita sesuai ID
-$query = "SELECT * FROM berita WHERE id = $id";
+$query = "SELECT * FROM berita WHERE idBerita = $id";
 $result = mysqli_query($koneksi, $query);
 $berita = mysqli_fetch_assoc($result);
 ?>
@@ -38,11 +38,11 @@ $berita = mysqli_fetch_assoc($result);
         <h2 class="text-2xl font-bold text-[#285430] mb-6">Berita Lainnya</h2>
         <div class="grid md:grid-cols-3 gap-6">
           <?php
-          $other_query = "SELECT id, judul, gambar, tanggal FROM berita WHERE id != $id ORDER BY tanggal DESC LIMIT 3";
+          $other_query = "SELECT idBerita, judul, gambar, tanggal FROM berita WHERE idBerita != $id ORDER BY tanggal DESC LIMIT 3";
           $other_result = mysqli_query($koneksi, $other_query);
           while ($row = mysqli_fetch_assoc($other_result)):
           ?>
-            <a href="berita-detail.php?id=<?= $row['id'] ?>"
+            <a href="berita-detail.php?id=<?= $row['idBerita'] ?>"
               class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-2xl transition border-2 border-transparent hover:border-[#5F8D4E] block">
               <div class="relative h-40 overflow-hidden">
                 <img

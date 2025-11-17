@@ -40,7 +40,7 @@ include __DIR__ . "/includes/_header.php";
             <p class="text-[#5F8D4E] font-semibold">
               <?= date('d M Y, H:i', strtotime($headline['tanggal'])) ?>
             </p>
-            <a href="berita-detail.php?id=<?= $headline['id'] ?>"
+            <a href="berita-detail.php?id=<?= $headline['idBerita'] ?>"
               class="bg-[#285430] text-[#E5D9B6] px-6 py-2 rounded-lg hover:bg-[#5F8D4E] transition">
               Baca Selengkapnya
             </a>
@@ -58,8 +58,7 @@ include __DIR__ . "/includes/_header.php";
 
       while ($news = mysqli_fetch_assoc($news_result)):
       ?>
-        <a href="berita-detail.php?id=<?= $news['id'] ?>"
-          class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-[#5F8D4E] block">
+        <a href="berita-detail.php?id=<?= $news['idBerita'] ?>" class=" bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-[#5F8D4E] block">
           <div class="relative h-52 overflow-hidden">
             <img
               src="assets/images/<?= htmlspecialchars($news['gambar']) ?>"
