@@ -20,7 +20,7 @@ $newsQ = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC LIMI
 
     <!-- Page Title -->
     <div class="mb-12">
-      <span class="inline-block border-4 border-[#285430] bg-white rounded-full px-10 py-4 text-2xl font-bold text-[#285430] shadow-xl">
+      <span class="inline-block border-4 border-[#5F8D4E] bg-[#F4ECD9] rounded-full px-10 py-4 text-4xl font-bold text-[#285430] shadow-xl">
         Berita Terkini
       </span>
     </div>
@@ -33,7 +33,7 @@ $newsQ = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC LIMI
       <div class="grid lg:grid-cols-2 gap-8 mb-16">
 
         <!-- Gambar Headline -->
-        <div class="h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#A4BE7B]">
+        <div class="h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-[#5F8D4E]">
           <img
             src="assets/images/<?= htmlspecialchars($headline['gambar']) ?>"
             alt="<?= htmlspecialchars($headline['judul']) ?>"
@@ -46,7 +46,7 @@ $newsQ = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC LIMI
             HEADLINE
           </span>
 
-          <h3 class="text-4xl font-bold text-[#285430] mb-4 leading-tight">
+          <h3 class="text-3xl font-bold text-[#285430] mb-4 leading-tight">
             <?= htmlspecialchars($headline['judul']) ?>
           </h3>
 
@@ -60,7 +60,7 @@ $newsQ = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC LIMI
             </p>
 
             <a href="berita-detail.php?id=<?= $headline['idBerita'] ?>"
-              class="bg-[#285430] text-[#E5D9B6] px-6 py-2 rounded-lg hover:bg-[#5F8D4E] transition">
+              class="bg-[#285430] text-[#FFFFFF] px-6 py-2 rounded-lg hover:bg-[#5F8D4E] transition">
               Baca Selengkapnya
             </a>
           </div>
