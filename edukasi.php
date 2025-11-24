@@ -32,10 +32,13 @@
   <!-- HERO -->
   <section class="py-20 slide-up">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <svg class="w-32 h-32 text-light mx-auto mb-6 opacity-80" fill="none" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-      </svg>
+      <!-- LOGO BUKU: Dikurangi jadi 250px (setengah dari 500px) -->
+      <div class="flex justify-center items-center mb-10">
+        <svg style="width: 250px; height: 250px; max-width: 100%;" class="text-light opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0"
+            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      </div>
       <h1 class="text-6xl font-bold text-light mb-4">GEMPA BUMI</h1>
       <p class="text-2xl text-light opacity-90">Panduan Lengkap, Visual, dan Mudah Dipahami</p>
     </div>
@@ -50,9 +53,11 @@
 
       <!-- Tektonik -->
       <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-4 border-secondary hover:-translate-y-2 transition-all duration-300 slide-up">
-        <div class="bg-gradient-to-br from-secondary to-primary h-64 flex items-center justify-center">
-          <svg class="w-32 h-32 text-light" fill="none" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+        <!-- Container ikon -->
+        <div class="bg-gradient-to-br from-secondary to-primary py-16 flex items-center justify-center">
+          <!-- LOGO PETIR: Dikurangi jadi 200px (setengah dari 400px) -->
+          <svg style="width: 200px; height: 200px; max-width: 80%;" class="text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
               d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
@@ -72,9 +77,11 @@
 
       <!-- Vulkanik -->
       <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-4 border-accent hover:-translate-y-2 transition-all duration-300 slide-up">
-        <div class="bg-gradient-to-br from-accent to-secondary h-64 flex items-center justify-center">
-          <svg class="w-32 h-32 text-light" fill="none" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+        <!-- Container ikon -->
+        <div class="bg-gradient-to-br from-accent to-secondary py-16 flex items-center justify-center">
+          <!-- LOGO GUNUNG: Dikurangi jadi 200px (setengah dari 400px) -->
+          <svg style="width: 200px; height: 200px; max-width: 80%;" class="text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
               d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
         </div>
